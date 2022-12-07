@@ -2,7 +2,7 @@ package com.learning.lovebabar450.string;
 
 import java.util.ArrayList;
 
-public class All_Sub_Sequence_57 {
+public class All_Sub_Sequence_56 {
 	
 	public void subSequence(String inputString,String seq,ArrayList<String> list){
 	
