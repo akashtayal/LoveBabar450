@@ -11,56 +11,48 @@ public class Longest_Palindrome_String_54 {
 	 * 
 	 * 
 	 */
-	String longestPalindrome(String inputString) {
+	String longestPalindrome(String inputString){String outputString = inputString.substring(0, 1);
+	int startIndex;
+	int endIndex;
+	int length=1;
+	for (int index=0;index<inputString.length();index++) {
 		
-		String outputString = inputString.substring(0, 1);
-		int startIndex;
-		int endIndex;
-		int length=1;
-		for (int index=0;index<inputString.length();index++) {
-			
-			// even length
-			startIndex = index;
-			endIndex = index+1;
-			
-			while((startIndex>=0 && endIndex<inputString.length()) && (inputString.charAt(startIndex)==inputString.charAt(endIndex))) {
+		// even length
+		startIndex = index;
+		endIndex = index+1;
+		
+		while((startIndex>=0 && endIndex<inputString.length()) && (inputString.charAt(startIndex)==inputString.charAt(endIndex))) {
+		startIndex--;
+		endIndex++;
+		}
+		
+		startIndex++;
+		endIndex--;
+		if( (endIndex-startIndex) +1> length) {
+		outputString = inputString.substring(startIndex, endIndex+1);	
+		length = outputString.length();
+		}
+		
+		// odd length
+	
+		startIndex = index-1;
+		endIndex = index+1;
+		while((startIndex>=0 && endIndex<inputString.length()) && (inputString.charAt(startIndex)==inputString.charAt(endIndex))) {
 			startIndex--;
 			endIndex++;
 			}
-			
-			startIndex++;
-			endIndex--;
-			if( (endIndex-startIndex) > length) {
-			outputString = inputString.substring(startIndex, endIndex+1);	
+		startIndex++;
+		endIndex--;
+			if( (endIndex-startIndex)+1 > length) {
+			outputString = inputString.substring(startIndex, endIndex+1);
 			length = outputString.length();
-			}
-			
-			// odd length
-			if(index==0 || index==inputString.length()-1)
-			startIndex=endIndex=0;
-				else {
-			startIndex = index-1;
-			endIndex = index+1;
-			}
-			while((startIndex>=0 && endIndex<inputString.length()) && (inputString.charAt(startIndex)==inputString.charAt(endIndex))) {
-				startIndex--;
-				endIndex++;
-				}
-			startIndex++;
-			endIndex--;
-				if( (endIndex-startIndex) > length) {
-				outputString = inputString.substring(startIndex, endIndex+1);
-				length = outputString.length();
 
-				}
-			
-		}
-	
+			}
 		
-		
-		return outputString;
 	}
-	
+	return outputString;
+}
+
 	
 	
 	/*
