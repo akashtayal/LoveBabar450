@@ -1,8 +1,8 @@
-package com.learning.lovebabar450.string;
+package com.learning.lovebabar450.array;
 
-public class Reverse_String_47 {
+public class Reverse_Array_01 {
 
-	 public void reverseString(char[] inputArray) {
+	 public void reverseArray(char[] inputArray) {
 	      
 		 char temp;
 		 int length = inputArray.length-1;
