@@ -1,8 +1,10 @@
 package com.learning.lovebabar450.linklist;
 
+import java.util.HashSet;
+
 public class Remove_Duplicate_131 {
 
-	 Node removeDuplicates(Node head)
+	  Node removeDuplicates(Node head)
 	    {
 		// Your code here	
 		Node node = head,start;
@@ -27,7 +29,6 @@ public class Remove_Duplicate_131 {
 		    }
 		        node.next =null;
 		return start;
-	    }
-	
+	    }	
 	
 }
