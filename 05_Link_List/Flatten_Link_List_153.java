@@ -13,11 +13,13 @@ public class Flatten_Link_List_153 {
 		        /*  Case-1
 		        *   when root.next == null 
 		        *   root.bottom !=null
-		        *   
 		       *     Case-2
 		       *     when root.bottom == null
 		        *    Case-3
 		        *   Root.bottom < root.next.data; 
+		        *   Case -4
+		        *   root.bottom> root.next.data;
+		        *   
 		        */
 		        if(root.next == null && root.bottom!=null){
 		            root.next = root.bottom;
